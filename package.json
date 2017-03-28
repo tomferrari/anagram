@@ -1,5 +1,5 @@
 {
-    "name": "anagram",
+    "name": "AnagramGenerator",
     "version": "1.0.0",
     "keywords": ["util", "functional", "server", "client", "browser"],
     "author": "Thomas Ferrari, Gautier Bressanin, Hadrien Rannou",
