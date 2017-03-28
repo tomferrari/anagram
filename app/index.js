@@ -4,11 +4,19 @@ var anagram = require('./anagram.js') ;
 
 var server = http.createServer(function (requete, resultat) {
     var page = url.parse(requete.url).pathname;
-    var count = page.length;
+    var pagear = page.split('/');
+    var count = pagear[1].length;
     var data;
     resultat.writeHead(200,{"Content-Type": "text/plain; charset=UTF-8"});
 
-        data = anagram.tch(page);
+        if (count < 6)
+    	{
+        	data = anagram.tch(page);
+    	}
+    	else
+    	{
+    		data = ("Erreur");
+    	}
 
     resultat.end(data);
 });
