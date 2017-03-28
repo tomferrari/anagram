@@ -9,13 +9,13 @@ var server = http.createServer(function (requete, resultat) {
     var data;
     resultat.writeHead(200,{"Content-Type": "text/plain; charset=UTF-8"});
 
-        if (count < 6)
+    	if (count < 6)
     	{
-        	data = anagram.tch(page);
+        	data = anagram.anagramgenerator(pagear);
     	}
     	else
     	{
-    		data = ("Erreur");
+    		data = ("Erreur, veuillez un mot de 5 caractères ou moins");
     	}
 
     resultat.end(data);
