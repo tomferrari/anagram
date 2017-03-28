@@ -1,18 +1,21 @@
-exports.tch = function(word)
+exports.anagramgenerator = function(word)
 {
-	var letters = word.split(''),
-		i = 0,
-		l = letters.length,
-		letterFreq = {};
-
-	for (; i < l; i++)
+	var an = word;
+	var anagrammes = function(an) 
 	{
-		if (letterFreq[ letters[i] ])
-			letterFreq[ letters[i] ]++;
-		else
-			letterFreq[ letters[i] ] = 1;
+	    var anagrams = {};
+	    an.forEach(function(str) 
+	    {
+	        var find = function(a, word) 
+	        {
+	            if (word == '') 
+	                anagrams[a] = 1;
+	            for (var i = 0; i < word.length; i++)
+	                find(a + word[i], word.slice(0, i) + word.slice(i + 1));
+	        };
+	        find('', word);
+	    });
+	    return Object.keys(anagrams);
 	}
-
-	return letterFreq;
-	
+	return anagrammes(an).toString();
 }
