@@ -2,7 +2,7 @@
     "name": "anagram",
     "version": "1.0.0",
     "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "Thomas,Gauthier,Hadrien",
+    "author": "Thomas Ferrari, Gautier Bressanin, Hadrien Rannou",
     "contributors": [],
     "dependencies": {}
 }
