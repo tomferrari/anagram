@@ -17,5 +17,5 @@ exports.anagramgenerator = function(word)
 	    });
 	    return Object.keys(anagrams);
 	}
-	return anagrammes(an).toString();
+	return anagrammes(an).sort().toString();
 }
