@@ -3,7 +3,7 @@ exports.anagramgenerator = function(word)
 	var an = word;
 	var anagrammes = function(an) 
 	{
-	    var anagrams = {};
+	    var anagrams = [];
 	    an.forEach(function(str) 
 	    {
 	        var find = function(a, word) 
